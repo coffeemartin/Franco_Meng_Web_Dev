@@ -1,0 +1,28 @@
+body{
+    background-color: beige;
+}
+
+h1,h2{
+    color: darkblue;
+    font-family: Arial, sans-serif;
+}
+
+#date{
+    color: rgb(2, 80, 37);
+    font-size: 14px;
+}
+
+.class1{
+    background-color: rgb(230, 194, 173);
+}
+
+.div_class_1{
+    background-color: lightblue; 
+    padding: 10px; 
+    border: 1px solid black;
+}
+
+tr:hover td{
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+}
