@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme = "dark">
 
 <head>
     <title>Test</title>
     <link rel="stylesheet" href="css/style.css">
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <!-- <script>
+        function myFunction() {
+            alert("Hello, World!");
+        }
+    </script> -->
+    <script src="script.js"></script>
+    <!-- <script>alert("Hello, World!")</script> -->
 </head>
 
 <nav>
@@ -12,11 +20,29 @@
     </ul>           
 </nav>
 
-<body>
 
-    <h1>CITS5505 Individual Project</h1>
-    <h2>Franco Meng</h2>
-    <h2 id="date">March 2026 | (this is the same h2 with the name, but I used the styling to make the font size and colour different)</h2>
+<body>
+    <div class="container">
+        
+    <h1 class = 'h1'>CITS5505 Testing Project</h1>
+    <h2 class = 'display-6'>Franco Meng</h2>
+    <h2 id="date">March 2026 </h2>
+    <br>
+    <button type="button" class="btn btn-primary">This is a button</button>
+    <button class="btn btn-secondary">Secondary Button</button>
+    <button class="btn btn-success">Success Button</button>
+    <button class="btn btn-danger">Danger Button</button>
+    <br>
+    <br>
+    <!-- <button onclick="alert('Hello, World!')">Click Me!</button> -->
+    <!-- <button onclick="myFunction()">Click Me!</button> -->
+     <h1 id = "h1"> heading 1</h1>
+     <!-- <button onclick="document.getElementById('h1').innerHTML = 'Surprise!'" >Click Me!</button> -->
+        <button onclick="changeHeading()">Change Heading</button>
+        <button onclick="buttonClicked()">Click Me!</button>
+
+
+    <br>
     <ol type="1">
         <li>HTML</li>
         <li>CSS</li>
@@ -69,11 +95,19 @@
     </form>
 
 
-<a id="HBF LINK" href="https://www.hbf.com.au/run/entry-info" target="_blank">Click here to visit HBF Running</a>
+<a class = "link-success" id="HBF LINK" href="https://www.hbf.com.au/run/entry-info" target="_blank">Click here to visit HBF Running</a>
 <br>  
 <img src="https://images.stockcake.com/public/f/a/2/fa2f15e5-b6d1-436c-9756-c250d1483ac8_large/dove-of-peace-stockcake.jpg" 
 alt="This image is a representation of peace" 
 width="400">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!-- <script>
+   
+    alert("Hello, World!");
+</script> -->
+
 </body>
 
 </html>
