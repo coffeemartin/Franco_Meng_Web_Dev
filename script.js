@@ -36,3 +36,32 @@ function changeHeading() {
     headings[i].innerHTML = message;
   }
 }
+
+function openHTMLModal() {
+  let content = document.getElementById("html").innerHTML;
+  document.getElementById("htmlModalBody").innerHTML = content;
+}
+
+function openCSSModal() {
+  let content = document.getElementById("css").innerHTML;
+  document.getElementById("CssModalBody").innerHTML = content;
+}
+
+function openJavaScriptModal() {
+  let content = document.getElementById("js").innerHTML;
+  document.getElementById("JavaScriptModalBody").innerHTML = content;
+}
+
+const htmlModal = document.getElementById("htmlModal");
+const cssModal = document.getElementById("CssModal");
+const javaScriptModal = document.getElementById("JavaScriptModal");
+
+htmlModal.addEventListener("hidden.bs.modal", function () {
+  document.getElementById("htmlModalBody").innerHTML = "";
+});
+cssModal.addEventListener("hidden.bs.modal", function () {
+  document.getElementById("CssModalBody").innerHTML = "";
+});
+javaScriptModal.addEventListener("hidden.bs.modal", function () {
+  document.getElementById("JavaScriptModalBody").innerHTML = "";
+});

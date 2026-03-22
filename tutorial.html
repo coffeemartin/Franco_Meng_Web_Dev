@@ -1,109 +1,393 @@
 <!DOCTYPE html>
-<html data-bs-theme = "dark">
+<html lang="en" data-bs-theme="dark">
 
 <head>
-    <title>Test</title>
+    <title>Franco_Project</title>
     <link rel="stylesheet" href="css/style.css">
-     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <!-- <script>
         function myFunction() {
             alert("Hello, World!");
         }
     </script> -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <!-- <script>alert("Hello, World!")</script> -->
 </head>
 
-<nav>
+<body>
+    <!-- <nav>
     <ul>
         <li><a href="#HBF LINK">HBF Running</a></li>
     </ul>           
-</nav>
+</nav> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
 
 
-<body>
+            <!-- Mobile toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav custom-nav-links">
+
+                    <!-- Tutorial (current page) -->
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-tutorial active" href="tutorial.html">Tutorial</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-quiz" href="quiz.html">Quiz</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-reflection" href="AI_Reflection.html">AI Reflection</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-cv" href="Franco_cv.html">CV</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- above is the navigation bar, which is consistent across all pages. 
+ The "active" class is added to the current page's link to highlight it. -->
+
     <div class="container">
-        
-    <h1 class = 'h1'>CITS5505 Testing Project</h1>
-    <h2 class = 'display-6'>Franco Meng</h2>
-    <h2 id="date">March 2026 </h2>
-    <br>
-    <button type="button" class="btn btn-primary">This is a button</button>
-    <button class="btn btn-secondary">Secondary Button</button>
-    <button class="btn btn-success">Success Button</button>
-    <button class="btn btn-danger">Danger Button</button>
-    <br>
-    <br>
-    <!-- <button onclick="alert('Hello, World!')">Click Me!</button> -->
-    <!-- <button onclick="myFunction()">Click Me!</button> -->
-     <h1 id = "h1"> heading 1</h1>
-     <!-- <button onclick="document.getElementById('h1').innerHTML = 'Surprise!'" >Click Me!</button> -->
+        <br>
+        <h1 class='h2'>HTML, CSS, JavaScript Tutorial</h1>
+        <!-- <h2 class = 'display-6'>Franco Meng</h2>
+    <h2 id="date">March 2026 </h2> -->
+        <br>
+        <br>
+        <p>
+            Modern websites are built using three core technologies: HTML, CSS, and JavaScript. These technologies work
+            together to create webpages that are structured, visually appealing, and interactive. HTML provides the
+            content and layout, CSS controls the appearance and style, and JavaScript adds behaviour and dynamic
+            features. Understanding how these three parts work together is an essential first step in web development.
+        </p>
+        <p>HTML, CSS, and JavaScript are designed to work together. HTML provides the structure of the content, CSS
+            improves the appearance, and JavaScript adds interactivity. A webpage usually needs all three to create a
+            complete user experience. For example, a button may be created with HTML, styled with CSS, and programmed
+            with JavaScript to perform an action when clicked.
+        <table class="table table-bordered table-center-content">
+            <thead>
+                <tr>
+                    <!-- <th><button class="btn btn-tutorial-color" data-bs-toggle="modal" data-bs-target="#htmlModal">
+            HTML
+        </button></th> -->
+                    <th><button class="btn btn-tutorial-color" onclick="openHTMLModal()" data-bs-toggle="modal"
+                            data-bs-target="#htmlModal"> HTML</button></th>
+                    <!-- <th><a href="#html" class="btn btn-tutorial-color">HTML</a></th> -->
+                    <th><button class="btn btn-tutorial-color" onclick="openCSSModal()" data-bs-toggle="modal"
+                            data-bs-target="#CssModal"> CSS</button></th>
+                    <th><button class="btn btn-tutorial-color" onclick="openJavaScriptModal()" data-bs-toggle="modal"
+                            data-bs-target="#JavaScriptModal"> JavaScript</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Builds the structure</td>
+                    <td>Styles the page</td>
+                    <td>Adds interactivity</td>
+                </tr>
+                <tr>
+                    <td>Skeleton</td>
+                    <td>Appearance</td>
+                    <td>Behaviour</td>
+                </tr>
+                <tr>
+                    <td>Headings, text, images</td>
+                    <td>Colours, fonts, layout</td>
+                    <td>Buttons, alerts, dynamic content</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b></b>
+                        <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></pre></b>
+                    </td>
+                    <td>
+                        <b>
+                            <pre><code>h1 { color: blue; }</code></pre>
+                        </b>
+                    </td>
+                    <td>
+                        <b>
+                            <pre><code>alert("Hello World")</code></pre>
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Above HTML code creates a heading element with the text "Hello World". The
+                        <code>&lt;h1&gt;</code> tag defines a top-level heading, and the text is enclosed between the
+                        opening and closing tags.</td>
+                    <td>Above CSS code selects all <code>&lt;h1&gt;</code> elements and sets their text color to blue.
+                        The selector <code>h1</code> targets the heading elements, and the declaration
+                        <code>{ color: blue; }</code> applies the style.</td>
+                    <td>Above JavaScript code displays an alert box with the message "Hello World". The
+                        <code>alert()</code> function is a built-in JavaScript function that shows a dialog box with a
+                        specified message.</td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+
+        <br>
+        <div class="modal fade" id="htmlModal" tabindex="-1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">HTML Basics</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- ✅ THIS is where your div goes -->
+                    <div class="modal-body" id="htmlModalBody"></div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <section id="html" class="d-none">
+            <p>HTML (HyperText Markup Language) is the standard language for creating web pages. It uses a system
+                of tags to structure content on the web. For example, <code>&lt;h1&gt;</code> defines a top-level
+                heading,
+                while <code>&lt;p&gt;</code> defines a paragraph.</p>
+            <p>
+                HTML stands for HyperText Markup Language. It is the standard language used to structure the content of
+                a webpage. HTML defines elements such as headings, paragraphs, images, links, lists, and tables. It does
+                not focus on how the page looks, but instead describes what each part of the content is. For example, a
+                heading tells the browser that a piece of text is a title, while a paragraph element identifies normal
+                body text. HTML acts as the foundation of every webpage.
+            </p>
+            <p>HTML elements are the building blocks of web pages.
+                They consist of a start tag, content, and an end tag. For example,
+                <code>&lt;h1&gt;This is a heading&lt;/h1&gt;</code> creates a heading element with the
+                text "This is a heading". HTML elements can also have attributes that provide additional information
+                about the element. For instance, <code>&lt;a href="https://www.example.com"&gt;
+                Visit Example&lt;/a&gt;</code> creates a hyperlink that
+                points to "https://www.example.com".</p>
+
+            <a class="text-success" id="W3 HTML" href="https://www.w3schools.com/html/default.asp" target="_blank">
+                W3 Resources</a>
+            <div class="ratio ratio-16x9 mt-3">
+                <iframe id="htmlVideo" width="853" height="480" src="https://www.youtube.com/embed/BzYMFd-lQL4" title="Learn HTML for Beginners - W3Schools.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <br>
+        <div class="modal fade" id="CssModal" tabindex="-1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">CSS Basics</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- ✅ THIS is where your div goes -->
+                    <div class="modal-body" id="CssModalBody"></div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <section id="css" class="d-none">
+            <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It allows you to control the color,
+                font,
+                spacing, and overall appearance of your HTML elements. For instance, you can use CSS to set the
+                background
+                color of a page or to change the font size of headings.</p>
+            <p>CSS allows you to apply styles to HTML elements. You can use CSS to change the color, font,
+                size, and layout of your web page. For example, you can create a class called "highlight"
+                that changes the background color of an element to yellow:</p>
+            <p>
+                CSS stands for Cascading Style Sheets. It is used to control the presentation and visual design of a
+                webpage. With CSS, developers can change colours, fonts, spacing, borders, layouts, and responsive
+                behaviour
+                for different screen sizes. While HTML creates the structure, CSS makes the page attractive and easier
+                to
+                read. Without CSS, webpages would still function, but they would look plain and unstyled.
+            </p>
+            <a class="text-success" id="W3 CSS" href="https://www.w3schools.com/css/" target="_blank">
+                W3 Resources
+            </a>
+
+            <div class="ratio ratio-16x9 mt-3">
+                <iframe id="cssVideo" width="853" height="480" src="https://www.youtube.com/embed/AGDDdsiZ0Ko" title="Learn CSS for Beginners - W3Schools.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <br>
+        <div class="modal fade" id="JavaScriptModal" tabindex="-1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">JavaScript Basics</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- ✅ THIS is where your div goes -->
+                    <div class="modal-body" id="JavaScriptModalBody"></div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <section id="js" class="d-none">
+            <p>JavaScript is a programming language that enables interactive features on web pages. It can be used to
+                create
+                dynamic content, validate forms, and handle user events like clicks and keyboard input. For example, you
+                can
+                use JavaScript to display an alert message when a button is clicked.</p>
+            <p>JavaScript is a programming language used to make webpages interactive and dynamic. It allows developers
+                to
+                respond to user actions such as clicking buttons, filling in forms, or navigating through content.
+                JavaScript can change text, update styles, validate input, show messages, and load data without
+                refreshing
+                the whole page. In modern web development, JavaScript is what brings a webpage to life.</p>
+            <a class="text-success" id="W3 JS" href="https://www.w3schools.com/js/default.asp" target="_blank">
+                W3 Resources
+            </a>
+            <div class="ratio ratio-16x9 mt-3">
+             <iframe id="jsVideo" width="853" height="480" src="https://www.youtube.com/embed/zofMnllkVfI" title="JavaScript - Introduction - W3Schools.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <br>
+        <hr>
+        <br>
+
+        <br>
+        <hr>
+        <br>
+
+
+        <br>
+
+        <button type="button" class="btn btn-primary">This is a button</button>
+
+        <button class="btn btn-secondary">Secondary Button</button>
+        <button class="btn btn-success">Success Button</button>
+        <button class="btn btn-danger">Danger Button</button>
+        <br>
+        <br>
+        <!-- <button onclick="alert('Hello, World!')">Click Me!</button> -->
+        <!-- <button onclick="myFunction()">Click Me!</button> -->
+        <h1 id="h1"> heading 1</h1>
+        <!-- <button onclick="document.getElementById('h1').innerHTML = 'Surprise!'" >Click Me!</button> -->
         <button onclick="changeHeading()">Change Heading</button>
         <button onclick="buttonClicked()">Click Me!</button>
 
 
-    <br>
-    <ol type="1">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ol>
-    
-    <ul type="square">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    <p>This is a <em>test</em> page for CITS5505. </p>
-<table border="1">
-    <tr><th class = "class1">Name</th><th class = "class1">Age&frac23;</th><th class = "class1">City</th></tr>
-    <tr><td>Alice</td><td>30</td><td>New York</td></tr>
-    <tr><td>Bob</td><td>25</td><td>Los Angeles</td></tr>
-    <tr><td>Charlie</td><td>35</td><td>Chicago  </td></tr>
-</table>
+        <br>
+        <ol type="1">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
 
-<br>
+        <ul type="square">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <p>This is a <em>test</em> page for CITS5505. </p>
+            <table border="1">
+                <tr>
+                    <th class="class1">Name</th>
+                    <th class="class1">Age&frac23;</th>
+                    <th class="class1">City</th>
+                </tr>
+                <tr>
+                    <td>Alice</td>
+                    <td>30</td>
+                    <td>New York</td>
+                </tr>
+                <tr>
+                    <td>Bob</td>
+                    <td>25</td>
+                    <td>Los Angeles</td>
+                </tr>
+                <tr>
+                    <td>Charlie</td>
+                    <td>35</td>
+                    <td>Chicago </td>
+                </tr>
+            </table>
 
-    
+            <br>
 
-    <div class = "div_class_1">
-        <p>This is a div element with a light <span style="background-color: rgb(230, 194, 173);">blue</span>
-         background, padding, and a border.</p>  
-        <p>It <b><em>contains</em></b> some text to demonstrate the styling.<br>
-        <code>This is some code</code></p>
 
+
+            <div class="div_class_1">
+                <p>This is a div element with a light <span style="background-color: rgb(230, 194, 173);">blue</span>
+                    background, padding, and a border.</p>
+                <p>It <b><em>contains</em></b> some text to demonstrate the styling.<br>
+                    <code>This is some code</code>
+                </p>
+
+            </div>
+            <br>
+
+
+
+
+
+            <br>
+            <form action="/action_page.php" method="get">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="_name">Name:</label>
+                    <input type="text" id="name" name="_name"><br><br>
+                    <label for="_email">Email:</label>
+                    <input type="email" id="email" name="_email" , placeholder="Enter email here"><br><br>
+                    <label for="_favcolor">Favourite color:</label>
+                    <input type="color" id="Favourite color" name="_favcolor" value="#000000"><br><br>
+                    <label for="_grpMembers">Number of Group Members:</label>
+                    <input type="number" name="_grpMembers" id="grpMembers" min="1" max="10" value="1"><br><br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+
+
+            <a class="link-success" id="HBF LINK" href="https://www.hbf.com.au/run/entry-info" target="_blank">Click
+                here to visit HBF Running</a>
+            <br>
+            <img src="https://images.stockcake.com/public/f/a/2/fa2f15e5-b6d1-436c-9756-c250d1483ac8_large/dove-of-peace-stockcake.jpg"
+                alt="This image is a representation of peace" width="400">
     </div>
-    <br>
-    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
-
-
-
-    <br>
-    <form action="/action_page.php" method="get">
-        <fieldset>
-            <legend>Personal Information</legend>
-            <label for="_name">Name:</label>
-            <input type="text" id="name" name="_name"><br><br>
-            <label for="_email">Email:</label>
-            <input type="email" id="email" name="_email", placeholder="Enter email here"><br><br>
-            <label for="_favcolor">Favourite color:</label>
-            <input type="color" id="Favourite color" name="_favcolor" value="#000000"><br><br>
-            <label for="_grpMembers">Number of Group Members:</label>
-            <input type="number" name="_grpMembers" id="grpMembers" min="1" max="10" value="1"><br><br>
-            <input type="submit" value="Submit">
-        </fieldset>
-    </form>
-
-
-<a class = "link-success" id="HBF LINK" href="https://www.hbf.com.au/run/entry-info" target="_blank">Click here to visit HBF Running</a>
-<br>  
-<img src="https://images.stockcake.com/public/f/a/2/fa2f15e5-b6d1-436c-9756-c250d1483ac8_large/dove-of-peace-stockcake.jpg" 
-alt="This image is a representation of peace" 
-width="400">
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-<!-- <script>
+    <!-- <script>
    
     alert("Hello, World!");
 </script> -->

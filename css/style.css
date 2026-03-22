@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: beige;
 }
 
@@ -26,4 +26,106 @@ h2 {
 tr:hover td {
   text-decoration: underline;
   font-family: "Courier New", Courier, monospace;
+}
+
+.custom-nav-links {
+  gap: 0.5rem;
+} */
+
+.custom-nav-links .nav-link {
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding: 0.45rem 0.9rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.custom-nav-links {
+  gap: 0.75rem;
+}
+
+.custom-nav-links .nav-link:hover,
+.custom-nav-links .nav-link:focus {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.custom-nav-links .nav-link.active {
+  outline: 2px solid rgba(255, 255, 255, 0.45);
+  outline-offset: 1px;
+}
+
+.custom-nav-links .nav-link-tutorial {
+  background: linear-gradient(135deg, #1f7a8c, #2c9fb8);
+}
+
+.custom-nav-links .nav-link-quiz {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+}
+
+.custom-nav-links .nav-link-reflection {
+  background: linear-gradient(135deg, #ad1457, #ec407a);
+}
+
+.custom-nav-links .nav-link-cv {
+  background: linear-gradient(135deg, #ef6c00, #ff9800);
+}
+
+.btn-tutorial-color {
+  background: transparent !important;
+  color: #2c9fb8 !important;
+  border: 2px solid #2c9fb8 !important;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-tutorial-color:hover,
+.btn-tutorial-color:focus {
+  background: linear-gradient(135deg, #1f7a8c, #2c9fb8);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(31, 122, 140, 0.3);
+}
+
+.btn-tutorial-color:active {
+  background: linear-gradient(135deg, #1f7a8c, #2c9fb8);
+  color: #fff;
+  border-color: transparent;
+}
+
+.table-center-content th,
+.table-center-content td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-center-content {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-center-content th,
+.table-center-content td {
+  width: 33.333%;
+}
+
+.table-center-content thead th {
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.table-center-content thead th:hover {
+  background-color: rgba(44, 159, 184, 0.12);
+  box-shadow: inset 0 0 0 2px rgba(44, 159, 184, 0.45);
 }
